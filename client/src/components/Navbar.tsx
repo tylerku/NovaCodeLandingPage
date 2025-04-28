@@ -26,7 +26,7 @@ const Navbar = () => {
               <span className="text-2xl font-space font-bold text-gradient">NovaCode</span>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="flex items-center space-x-8">
               <button 
                 onClick={() => handleNavClick('how-it-works')} 
@@ -66,7 +66,7 @@ const Navbar = () => {
               </Button>
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button 
               onClick={toggleMobileMenu} 
               className="text-soft-silver hover:text-primary transition-colors duration-300"
@@ -78,7 +78,7 @@ const Navbar = () => {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-background border-t border-border ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:hidden bg-background border-t border-border ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <button 
             onClick={() => handleNavClick('how-it-works')} 
@@ -110,12 +110,6 @@ const Navbar = () => {
           >
             About
           </button>
-          <Button 
-            onClick={() => handleNavClick('schedule')}
-            className="block mt-4 mx-3 w-[calc(100%-1.5rem)] bg-primary text-primary-foreground font-medium px-4 py-2 rounded-full"
-          >
-            Schedule Launch Hour
-          </Button>
         </div>
       </div>
     </nav>
