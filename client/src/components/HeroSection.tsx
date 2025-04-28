@@ -15,22 +15,19 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-block mb-3 px-4 py-1 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20">
-            <span className="text-sm font-medium text-primary animate-pulse">The Future of Software Creation</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-space font-bold leading-tight tracking-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold leading-tight tracking-tight mb-6 mt-6">
             <span className="block mb-2">Bring Your Vision to Life —</span>
             <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">Faster, Smarter, Powered by AI</span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10">
-            NovaCode combines world-class engineering and cutting-edge AI to build your dream product — faster, smarter, and more affordably than ever before.
+            NovaCode combines world-class engineering and cutting-edge AI to build your dream software product — faster, smarter, and more affordably than ever before.
           </p>
           
           {/* Central CTA */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <Button 
               onClick={() => smoothScrollTo('schedule')}
-              className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-medium px-8 py-7 h-auto text-lg rounded-lg shadow-glow hover:shadow-glow-intense transition-all duration-300 flex items-center gap-2 group"
+              className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-medium px-8 py-5 h-auto text-lg rounded-lg shadow-glow hover:shadow-glow-intense transition-all duration-300 flex items-center gap-2 group"
             >
               Schedule Your Launch Hour
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -38,7 +35,7 @@ const HeroSection = () => {
             <Button 
               onClick={() => smoothScrollTo('how-it-works')}
               variant="outline" 
-              className="bg-background/30 backdrop-blur-sm border border-primary/20 text-foreground px-8 py-7 h-auto text-lg rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
+              className="bg-background/30 backdrop-blur-sm border border-primary/20 text-foreground px-8 py-5 h-auto text-lg rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
             >
               See How It Works
             </Button>

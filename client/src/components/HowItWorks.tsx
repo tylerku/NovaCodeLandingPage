@@ -16,67 +16,75 @@ const HowItWorks = () => {
         {/* Timeline process */}
         <div className="max-w-4xl mx-auto relative">
           {/* Connecting line */}
-          <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-accent md:-translate-x-[1px]"></div>
+          <div className="absolute left-[25px] md:left-[50%] top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-accent"></div>
           
           {/* Step 1 - Launch Hour */}
-          <div className="relative grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 mb-12">
-            <div className="md:col-span-2 md:text-right order-2 md:order-1">
+          <div className="relative flex flex-col md:grid md:grid-cols-[1fr,60px,1fr] gap-4 md:gap-8 mb-16 md:mb-12">
+            <div className="ml-14 md:ml-0 order-2 md:order-1">
+              {/* Left side - Always cards on mobile and desktop */}
+              <div className="glass-card p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Headphones className="text-primary h-6 w-6" />
+                  <span className="text-primary font-medium">Discovery & Vision</span>
+                </div>
+                <p className="text-sm text-foreground/80">
+                  We listen deeply to understand not just your idea, but the impact you want to create in the world.
+                </p>
+              </div>
+            </div>
+            
+            <div className="relative flex justify-start md:justify-center items-start order-1 md:order-2">
+              <div className="absolute w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10 left-0 md:left-auto top-0">
+                1
+              </div>
+            </div>
+            
+            <div className="ml-14 md:ml-0 order-3">
+              {/* Right side - Always explanation text on mobile and desktop */}
               <h3 className="text-xl font-space font-bold mb-2">Launch Hour</h3>
               <p className="text-foreground/80 mb-2">
                 A focused 60-minute session where we deeply understand your vision, map possibilities, and chart a clear path forward.
               </p>
               <ul className="text-sm text-foreground/70 space-y-1">
-                <li className="flex items-center justify-end gap-1">
+                <li className="flex items-center gap-1">
+                  <Check className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>Discuss project scope and requirements</span>
-                  <Check className="h-4 w-4 text-primary flex-shrink-0" />
                 </li>
-                <li className="flex items-center justify-end gap-1">
+                <li className="flex items-center gap-1">
+                  <Check className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>Explore technical feasibility and approach</span>
-                  <Check className="h-4 w-4 text-primary flex-shrink-0" />
                 </li>
-                <li className="flex items-center justify-end gap-1">
-                  <span>Initial timeline and budget discussion</span>
+                <li className="flex items-center gap-1">
                   <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                  <span>Initial timeline and budget discussion</span>
                 </li>
               </ul>
-            </div>
-            
-            <div className="relative md:col-span-1 flex justify-center items-start order-1 md:order-2">
-              <div className="w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10">
-                1
-              </div>
-            </div>
-            
-            <div className="glass-card md:col-span-2 p-6 order-3">
-              <div className="flex items-center gap-3 mb-3">
-                <Headphones className="text-primary h-6 w-6" />
-                <span className="text-primary font-medium">Discovery & Vision</span>
-              </div>
-              <p className="text-sm text-foreground/80">
-                We listen deeply to understand not just your idea, but the impact you want to create in the world.
-              </p>
             </div>
           </div>
           
           {/* Step 2 - Custom Plans */}
-          <div className="relative grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 mb-12">
-            <div className="glass-card md:col-span-2 p-6 order-3 md:order-1">
-              <div className="flex items-center gap-3 mb-3">
-                <FileText className="text-secondary h-6 w-6" />
-                <span className="text-secondary font-medium">Strategic Planning</span>
+          <div className="relative flex flex-col md:grid md:grid-cols-[1fr,60px,1fr] gap-4 md:gap-8 mb-16 md:mb-12">
+            <div className="ml-14 md:ml-0 order-2 md:order-1">
+              {/* Left side - Always cards */}
+              <div className="glass-card p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <FileText className="text-secondary h-6 w-6" />
+                  <span className="text-secondary font-medium">Strategic Planning</span>
+                </div>
+                <p className="text-sm text-foreground/80">
+                  AI-enhanced planning allows us to optimize your development roadmap for success.
+                </p>
               </div>
-              <p className="text-sm text-foreground/80">
-                AI-enhanced planning allows us to optimize your development roadmap for success.
-              </p>
             </div>
             
-            <div className="relative md:col-span-1 flex justify-center items-start order-1 md:order-2">
-              <div className="w-8 h-8 rounded-full bg-secondary border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10">
+            <div className="relative flex justify-start md:justify-center items-start order-1 md:order-2">
+              <div className="absolute w-8 h-8 rounded-full bg-secondary border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10 left-0 md:left-auto top-0">
                 2
               </div>
             </div>
             
-            <div className="md:col-span-2 order-2 md:order-3">
+            <div className="ml-14 md:ml-0 order-3">
+              {/* Right side - Always explanation text */}
               <h3 className="text-xl font-space font-bold mb-2">Custom Plans</h3>
               <p className="text-foreground/80 mb-2">
                 Receive both a Business Plan and Development Plan tailored exactly to your vision, enhanced by AI insights.
@@ -99,64 +107,72 @@ const HowItWorks = () => {
           </div>
           
           {/* Step 3 - AI-Enhanced Build */}
-          <div className="relative grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 mb-12">
-            <div className="md:col-span-2 md:text-right order-2 md:order-1">
+          <div className="relative flex flex-col md:grid md:grid-cols-[1fr,60px,1fr] gap-4 md:gap-8 mb-16 md:mb-12">
+            <div className="ml-14 md:ml-0 order-2 md:order-1">
+              {/* Left side - Always cards */}
+              <div className="glass-card p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Sparkles className="text-accent h-6 w-6" />
+                  <span className="text-accent font-medium">Rapid Creation</span>
+                </div>
+                <p className="text-sm text-foreground/80">
+                  Experience the magic of seeing your vision come to life with extraordinary speed and precision.
+                </p>
+              </div>
+            </div>
+            
+            <div className="relative flex justify-start md:justify-center items-start order-1 md:order-2">
+              <div className="absolute w-8 h-8 rounded-full bg-accent border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10 left-0 md:left-auto top-0">
+                3
+              </div>
+            </div>
+            
+            <div className="ml-14 md:ml-0 order-3">
+              {/* Right side - Always explanation text */}
               <h3 className="text-xl font-space font-bold mb-2">AI-Enhanced Build</h3>
               <p className="text-foreground/80 mb-2">
                 Our expert engineers leverage cutting-edge AI to rapidly transform your plan into a beautiful, working product.
               </p>
               <ul className="text-sm text-foreground/70 space-y-1">
-                <li className="flex items-center justify-end gap-1">
+                <li className="flex items-center gap-1">
+                  <Check className="h-4 w-4 text-accent flex-shrink-0" />
                   <span>Accelerated development cycles</span>
-                  <Check className="h-4 w-4 text-accent flex-shrink-0" />
                 </li>
-                <li className="flex items-center justify-end gap-1">
+                <li className="flex items-center gap-1">
+                  <Check className="h-4 w-4 text-accent flex-shrink-0" />
                   <span>Beautiful, intuitive design</span>
-                  <Check className="h-4 w-4 text-accent flex-shrink-0" />
                 </li>
-                <li className="flex items-center justify-end gap-1">
-                  <span>Regular progress updates</span>
+                <li className="flex items-center gap-1">
                   <Check className="h-4 w-4 text-accent flex-shrink-0" />
+                  <span>Regular progress updates</span>
                 </li>
               </ul>
-            </div>
-            
-            <div className="relative md:col-span-1 flex justify-center items-start order-1 md:order-2">
-              <div className="w-8 h-8 rounded-full bg-accent border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10">
-                3
-              </div>
-            </div>
-            
-            <div className="glass-card md:col-span-2 p-6 order-3">
-              <div className="flex items-center gap-3 mb-3">
-                <Sparkles className="text-accent h-6 w-6" />
-                <span className="text-accent font-medium">Rapid Creation</span>
-              </div>
-              <p className="text-sm text-foreground/80">
-                Experience the magic of seeing your vision come to life with extraordinary speed and precision.
-              </p>
             </div>
           </div>
           
           {/* Step 4 - Launch & Care */}
-          <div className="relative grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8">
-            <div className="glass-card md:col-span-2 p-6 order-3 md:order-1">
-              <div className="flex items-center gap-3 mb-3">
-                <Rocket className="text-primary h-6 w-6" />
-                <span className="text-primary font-medium">Continuous Growth</span>
+          <div className="relative flex flex-col md:grid md:grid-cols-[1fr,60px,1fr] gap-4 md:gap-8">
+            <div className="ml-14 md:ml-0 order-2 md:order-1">
+              {/* Left side - Always cards */}
+              <div className="glass-card p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Rocket className="text-primary h-6 w-6" />
+                  <span className="text-primary font-medium">Continuous Growth</span>
+                </div>
+                <p className="text-sm text-foreground/80">
+                  Our relationship extends beyond launch as we help your product evolve and thrive.
+                </p>
               </div>
-              <p className="text-sm text-foreground/80">
-                Our relationship extends beyond launch as we help your product evolve and thrive.
-              </p>
             </div>
             
-            <div className="relative md:col-span-1 flex justify-center items-start order-1 md:order-2">
-              <div className="w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10">
+            <div className="relative flex justify-start md:justify-center items-start order-1 md:order-2">
+              <div className="absolute w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center text-primary-foreground font-bold z-10 left-0 md:left-auto top-0">
                 4
               </div>
             </div>
             
-            <div className="md:col-span-2 order-2 md:order-3">
+            <div className="ml-14 md:ml-0 order-3">
+              {/* Right side - Always explanation text */}
               <h3 className="text-xl font-space font-bold mb-2">Launch & Care</h3>
               <p className="text-foreground/80 mb-2">
                 We don't just deliver your product – we partner with you for ongoing support, improvements, and growth through our Care Plans.
