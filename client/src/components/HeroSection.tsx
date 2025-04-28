@@ -37,7 +37,7 @@ const HeroSection = () => {
           <div className="relative hidden lg:block">
             <div className="relative w-full h-[500px] animate-float rounded-xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1635830625567-0f1616a4f4a8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=800&h=800" 
+                src="/hero-image.png" 
                 alt="Futuristic purple and blue tech visualization" 
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -45,7 +45,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-primary to-secondary p-5 rounded-xl">
               <div className="text-background font-medium">
-                <span className="block font-bold">90%+</span>
+                <span className="block font-bold">100%+</span>
                 <span className="text-sm">Project Delivery<br/>Success Rate</span>
               </div>
             </div>
