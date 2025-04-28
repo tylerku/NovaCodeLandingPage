@@ -1,0 +1,174 @@
+# NovaCode Development Plan
+
+## Tech Stack
+- **Frontend Framework:** Next.js (React-based, modern, SEO optimized)
+- **Backend API:** Next.js API Routes (serverless functions)
+- **Database:** PostgreSQL (hosted on Supabase)
+- **ORM:** Prisma ORM
+- **Authentication:** Supabase Auth (email/password initially, expandable to OAuth)
+- **Hosting:** Vercel (for frontend/backend), Supabase (for DB)
+- **Styling:** TailwindCSS (utility-first CSS)
+- **State Management:** React Query (for data fetching/mutations)
+- **Deployment Workflow:** GitHub -> Vercel (CI/CD enabled)
+
+---
+
+# Feature List
+
+## Frontend Features
+
+### 1. Public Website
+- Hero Section with CTA ("Schedule Your Launch Hour")
+- Navigation Bar (sticky on scroll)
+- How It Works Section
+- Launch Hour Details Section
+- NovaCode Care Plans Section
+- Portfolio / Past Projects Grid
+- About NovaCode Section
+- Testimonials Carousel
+- Final CTA Section ("Schedule Your Launch")
+- Footer (Quick Links, Socials, Copyright)
+
+### 2. Customer Interaction
+- Schedule Launch Hour Form
+  - Input fields: Name, Email, Company (Optional), Short Idea Description
+  - Dropdown: Preferred Time Slots
+  - Integration with Calendly or Internal Scheduler API
+- Confirmation Page after scheduling
+- Contact Support Form
+
+### 3. Admin Dashboard (for Internal Use)
+- Secure Admin Login (protected route)
+- View Scheduled Launch Calls
+- Manage Customers:
+  - View customer info
+  - Update customer status (Interested, In Progress, Completed, Care Plan)
+- View/Edit Portfolio Projects
+- Create/Update Testimonials
+
+---
+
+## Backend Features
+
+### 1. API Endpoints
+- `POST /api/schedule-launch`
+  - Receive scheduling form submission
+  - Insert customer entry into PostgreSQL
+- `GET /api/customers`
+  - Admin-only, fetch all customer entries
+- `POST /api/update-customer-status`
+  - Admin-only, update customer progress
+- `GET /api/portfolio`
+  - Public-facing, serve portfolio projects
+- `POST /api/portfolio`
+  - Admin-only, add new portfolio projects
+- `GET /api/testimonials`
+  - Public-facing, fetch testimonials
+- `POST /api/testimonials`
+  - Admin-only, add new testimonials
+
+### 2. Authentication
+- Use Supabase Auth for sign up/login
+- Protect API routes that require admin permissions
+- Session management using Supabase client SDK
+
+---
+
+## Database Schema (PostgreSQL via Prisma ORM)
+
+### Tables
+- **User** (for admin accounts)
+  - id (UUID, PK)
+  - email (string, unique)
+  - passwordHash (string)
+  - createdAt (timestamp)
+
+- **CustomerLead**
+  - id (UUID, PK)
+  - name (string)
+  - email (string)
+  - company (string, optional)
+  - ideaDescription (text)
+  - preferredTime (string)
+  - status (enum: 'interested', 'in-progress', 'completed', 'care-plan')
+  - createdAt (timestamp)
+
+- **PortfolioProject**
+  - id (UUID, PK)
+  - projectTitle (string)
+  - description (text)
+  - imageUrl (string)
+  - createdAt (timestamp)
+
+- **Testimonial**
+  - id (UUID, PK)
+  - customerName (string)
+  - customerQuote (text)
+  - customerImageUrl (string)
+  - createdAt (timestamp)
+
+---
+
+## Next.js Pages Structure
+
+```
+/pages
+  /api
+    schedule-launch.js
+    customers.js
+    update-customer-status.js
+    portfolio.js
+    testimonials.js
+  /admin
+    dashboard.js
+    login.js
+  index.js (Landing Page)
+  about.js
+  portfolio.js
+  care-plans.js
+  launch-hour.js
+```
+
+## Component Structure
+
+```
+/components
+  Navbar.jsx
+  Footer.jsx
+  HeroSection.jsx
+  HowItWorks.jsx
+  LaunchHourSection.jsx
+  CarePlans.jsx
+  PortfolioGrid.jsx
+  AboutSection.jsx
+  TestimonialsCarousel.jsx
+  FinalCTA.jsx
+  Admin
+    CustomerList.jsx
+    ProjectManager.jsx
+    TestimonialManager.jsx
+```
+
+---
+
+## Development Milestones
+
+1. **Set Up Project Environment**
+   - Initialize Next.js App
+   - Set up Supabase project (DB + Auth)
+   - Set up Prisma ORM with PostgreSQL connection
+2. **Build Public Website Pages**
+3. **Develop Scheduling Workflow + API**
+4. **Integrate Supabase Auth for Admin Login**
+5. **Create Admin Dashboard (Internal Tools)**
+6. **Deploy to Vercel + Supabase + Connect CI/CD**
+7. **Test End-to-End User Journey**
+8. **Polish Animations, UI/UX Enhancements**
+9. **Launch Beta Version**
+10. **Iterate with Customer Feedback**
+
+---
+
+## Notes
+- Start with MVP — Keep the initial version extremely simple and polished.
+- Future features: AI-powered project scoping, Dynamic project status portal for customers, Automated billing.
