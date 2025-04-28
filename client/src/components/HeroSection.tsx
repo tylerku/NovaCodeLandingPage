@@ -37,8 +37,8 @@ const HeroSection = () => {
           <div className="relative hidden lg:block">
             <div className="relative w-full h-[500px] animate-float rounded-xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=800&h=800" 
-                alt="Modern tech workspace with digital devices and creative development" 
+                src="https://images.unsplash.com/photo-1635830625567-0f1616a4f4a8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=800&h=800" 
+                alt="Futuristic purple and blue tech visualization" 
                 className="w-full h-full object-cover rounded-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
