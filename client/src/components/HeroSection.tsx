@@ -19,11 +19,11 @@ const HeroSection = () => {
             <span className="text-sm font-medium text-primary animate-pulse">The Future of Software Creation</span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-space font-bold leading-tight tracking-tight mb-6">
-            <span className="block mb-2">Turn Your Vision Into</span>
-            <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">Reality Without Code</span>
+            <span className="block mb-2">Bring Your Vision to Life —</span>
+            <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">Faster, Smarter, Powered by AI</span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10">
-            NovaCode empowers entrepreneurs to create stunning, powerful software without technical expertise. We build your dream application at a fraction of traditional costs.
+            NovaCode combines world-class engineering and cutting-edge AI to build your dream product — faster, smarter, and more affordably than ever before.
           </p>
           
           {/* Central CTA */}
@@ -50,28 +50,40 @@ const HeroSection = () => {
           <div className="relative bg-background/20 backdrop-blur-md border border-foreground/10 rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
-              <div className="text-3xl font-bold text-gradient mb-2">100%+</div>
-              <p className="text-foreground/70">Project Delivery Success Rate</p>
+              <div className="text-3xl font-bold text-gradient mb-1">100%+</div>
+              <p className="text-foreground/70 mb-1">Project Delivery Success Rate</p>
+              <p className="text-xs text-foreground/50 italic">Based on our track record of completed projects delivered on time</p>
             </div>
           </div>
           <div className="relative bg-background/20 backdrop-blur-md border border-foreground/10 rounded-xl p-6 hover:border-secondary/30 transition-all duration-300 group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
-              <div className="text-3xl font-bold text-gradient mb-2">30%+</div>
-              <p className="text-foreground/70">Cost Savings vs Traditional Development</p>
+              <div className="text-3xl font-bold text-gradient mb-1">30-50%</div>
+              <p className="text-foreground/70 mb-1">Cost Savings vs Traditional Development</p>
+              <p className="text-xs text-foreground/50 italic">Compared to industry standard development costs for similar projects</p>
             </div>
           </div>
           <div className="relative bg-background/20 backdrop-blur-md border border-foreground/10 rounded-xl p-6 hover:border-accent/30 transition-all duration-300 group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
-              <div className="text-3xl font-bold text-gradient mb-2">2x</div>
-              <p className="text-foreground/70">Faster Development & Deployment</p>
+              <div className="text-3xl font-bold text-gradient mb-1">2x</div>
+              <p className="text-foreground/70 mb-1">Faster Development & Deployment</p>
+              <p className="text-xs text-foreground/50 italic">Our AI-enhanced workflow slashes traditional development timelines in half</p>
             </div>
           </div>
         </div>
-        
-        {/* Stylish image placement */}
+
+        {/* Why NovaCode - AI Advantage Section */}
         <div className="mt-16 relative max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-space font-bold mb-3">
+              <span className="text-gradient">Why NovaCode?</span> The AI Advantage
+            </h2>
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+              Real engineers. Supercharged by AI. Delivered at a fraction of traditional cost and time.
+            </p>
+          </div>
+
           <div className="relative rounded-xl overflow-hidden group shadow-glow">
             <img 
               src="/hero-image.png" 
@@ -82,13 +94,13 @@ const HeroSection = () => {
             
             {/* Floating badges */}
             <div className="absolute top-4 left-4 bg-background/20 backdrop-blur-sm rounded-lg border border-primary/30 px-3 py-1 text-sm font-medium">
-              Beautiful Design
+              World-Class Engineering
             </div>
             <div className="absolute top-4 right-4 bg-background/20 backdrop-blur-sm rounded-lg border border-secondary/30 px-3 py-1 text-sm font-medium">
-              Powerful Features
+              AI-Enhanced Development
             </div>
             <div className="absolute bottom-4 left-4 bg-background/20 backdrop-blur-sm rounded-lg border border-accent/30 px-3 py-1 text-sm font-medium">
-              Expert Development
+              Premium Results, Affordable Price
             </div>
           </div>
         </div>
