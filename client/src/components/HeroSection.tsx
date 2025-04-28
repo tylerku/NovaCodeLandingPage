@@ -80,26 +80,6 @@ const HeroSection = () => {
               Real engineers. Supercharged by AI. Delivered at a fraction of traditional cost and time.
             </p>
           </div>
-
-          <div className="relative rounded-xl overflow-hidden group shadow-glow">
-            <img 
-              src="/hero-image.png" 
-              alt="Futuristic digital workspace with purple and blue tech accents" 
-              className="w-full h-[300px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-            
-            {/* Floating badges */}
-            <div className="absolute top-4 left-4 bg-background/20 backdrop-blur-sm rounded-lg border border-primary/30 px-3 py-1 text-sm font-medium">
-              World-Class Engineering
-            </div>
-            <div className="absolute top-4 right-4 bg-background/20 backdrop-blur-sm rounded-lg border border-secondary/30 px-3 py-1 text-sm font-medium">
-              AI-Enhanced Development
-            </div>
-            <div className="absolute bottom-4 left-4 bg-background/20 backdrop-blur-sm rounded-lg border border-accent/30 px-3 py-1 text-sm font-medium">
-              Premium Results, Affordable Price
-            </div>
-          </div>
         </div>
       </div>
     </section>
