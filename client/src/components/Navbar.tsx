@@ -60,7 +60,7 @@ const Navbar = () => {
               </button>
               <Button 
                 onClick={() => handleNavClick('schedule')}
-                className="gradient-border-button bg-background/5 backdrop-blur-sm text-white font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm"
+                className="hollow-button text-white font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm hover:shadow-glow"
               >
                 Schedule Launch Hour
               </Button>
@@ -113,7 +113,7 @@ const Navbar = () => {
           <div className="px-3 py-3">
             <Button 
               onClick={() => handleNavClick('schedule')}
-              className="gradient-border-button bg-background/5 backdrop-blur-sm text-white font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm w-full"
+              className="hollow-button text-white font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm hover:shadow-glow w-full"
             >
               Schedule Launch Hour
             </Button>
