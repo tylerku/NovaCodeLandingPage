@@ -27,11 +27,11 @@ const Home = () => {
       
       <Navbar />
       <HeroSection />
-      <HowItWorks />
       <LaunchHour />
+      <HowItWorks />
       <CarePlans />
       <PortfolioGrid />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <TestimonialsCarousel />
       <FinalCTA />
       <Footer />

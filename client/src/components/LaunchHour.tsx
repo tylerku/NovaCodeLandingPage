@@ -50,7 +50,7 @@ const LaunchHour = () => {
             <div className="pt-4">
               <Button 
                 onClick={() => smoothScrollTo('schedule')}
-                className="bg-primary text-primary-foreground font-medium px-6 py-3 rounded-full glow-on-hover transition-all duration-300"
+                className="hollow-button bg-transparent text-primary-foreground text-white font-medium px-6 py-3 rounded-full glow-on-hover transition-all duration-300 "
               >
                 Schedule Your Launch Hour
               </Button>

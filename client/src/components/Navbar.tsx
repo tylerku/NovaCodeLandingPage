@@ -60,7 +60,7 @@ const Navbar = () => {
               </button>
               <Button 
                 onClick={() => handleNavClick('schedule')}
-                className="hollow-button text-white font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm hover:shadow-glow"
+                className="hollow-button text-white font-medium bg-transparent px-5 py-2 rounded-full transition-all duration-300 text-sm shadow-glow"
               >
                 Schedule Launch Hour
               </Button>
