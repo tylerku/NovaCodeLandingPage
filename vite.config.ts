@@ -1,25 +1,33 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from 'url';
 
 // Construct equivalent of __dirname in ESM
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default defineConfig({
-  plugins: [
-    react(),
-    runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
-          ),
-        ]
-      : []),
-  ],
+// Dynamically import plugins only when needed
+const loadPlugins = async () => {
+  const plugins = [];
+  
+  // Only import React plugin if we're not in production
+  if (process.env.NODE_ENV !== "production") {
+    const react = (await import("@vitejs/plugin-react")).default;
+    plugins.push(react());
+    
+    const runtimeErrorOverlay = (await import("@replit/vite-plugin-runtime-error-modal")).default;
+    plugins.push(runtimeErrorOverlay());
+    
+    if (process.env.REPL_ID !== undefined) {
+      const { cartographer } = await import("@replit/vite-plugin-cartographer");
+      plugins.push(cartographer());
+    }
+  }
+  
+  return plugins;
+};
+
+export default defineConfig(async () => ({
+  plugins: await loadPlugins(),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
@@ -32,4 +40,4 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
-});
+}));

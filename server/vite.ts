@@ -1,9 +1,7 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
-import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
-import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -11,8 +9,6 @@ import { dirname } from "path";
 // Get current directory path using fileURLToPath
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-const viteLogger = createLogger();
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -26,6 +22,18 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
+  if (process.env.NODE_ENV === 'production') {
+    // In production, we shouldn't need Vite's development server
+    log('Production environment detected, skipping Vite setup');
+    return;
+  }
+  
+  // Only import Vite in development
+  const { createServer: createViteServer, createLogger } = await import("vite");
+  // Import viteConfig dynamically too
+  const viteConfig = (await import("../vite.config.js")).default;
+  
+  const viteLogger = createLogger();
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
